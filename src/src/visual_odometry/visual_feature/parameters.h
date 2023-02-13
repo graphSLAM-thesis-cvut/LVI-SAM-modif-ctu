@@ -13,7 +13,7 @@
 #include <sensor_msgs/image_encodings.h>
 #include <nav_msgs/Odometry.h>
 
-#include <opencv/cv.h>
+// #include <opencv/cv.h>
 #include <cv_bridge/cv_bridge.h>
 
 #include <pcl/point_cloud.h>
@@ -28,6 +28,10 @@
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/filters/crop_box.h> 
 #include <pcl_conversions/pcl_conversions.h>
+
+
+#include <opencv2/opencv.hpp>
+
 
 #include <tf/LinearMath/Quaternion.h>
 #include <tf/transform_listener.h>
