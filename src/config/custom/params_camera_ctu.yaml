@@ -8,6 +8,7 @@ project_name: "lvi_sam"
 imu_topic: "/imu/data" # 9DOF IMU
 image_topic: "/camera_front/image_raw"
 point_cloud_topic: "/points_out"
+#point_cloud_topic: "/points"
 
 # Lidar Params
 use_lidar: 1                     # whether use depth info from lidar or not
@@ -15,11 +16,11 @@ lidar_skip: 3                    # skip this amount of scans
 align_camera_lidar_estimation: 1 # align camera and lidar estimation for visualization
 
 ## (lidar to camera optical frame!!!)
-## lidar to camera  extrinsic 
+## lidar to camera  extrinsic , lidar wrt camera (optical), c_T_l. Ros: camera_0_optical os_sensor_perp
 lidar_to_cam_tx: 0.041
 lidar_to_cam_ty: 0.027
 lidar_to_cam_tz: -0.08
-lidar_to_cam_rx: 1.5708 # should've been -1.5708, there's a bug somewhere
+lidar_to_cam_rx: 1.5708 
 lidar_to_cam_ry: -1.5708
 lidar_to_cam_rz: 0.0 
 
@@ -31,6 +32,24 @@ imu_to_lidar_tz: -0.28
 imu_to_lidar_rx: 3.142
 imu_to_lidar_ry: 0.0
 imu_to_lidar_rz: 0.0
+
+# ## (lidar to camera optical frame!!!)
+# ## lidar to camera  extrinsic , lidar wrt camera (optical), c_T_l. Ros: camera_0_optical os_sensor_perp
+# lidar_to_cam_tx: 0.048
+# lidar_to_cam_ty: -0.080
+# lidar_to_cam_tz: -0.010
+# lidar_to_cam_rx: -1.5708
+# lidar_to_cam_ry: -0.758
+# lidar_to_cam_rz: 3.1415 
+
+# ## 9DOF IMU 
+# # imu to lidar extrinsic
+# imu_to_lidar_tx: 0.0
+# imu_to_lidar_ty: 0.0
+# imu_to_lidar_tz: -0.28
+# imu_to_lidar_rx: -3.142
+# imu_to_lidar_ry: 0.0
+# imu_to_lidar_rz: -0.785
 
 # camera model
 model_type: PINHOLE

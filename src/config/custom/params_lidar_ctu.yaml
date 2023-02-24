@@ -4,6 +4,7 @@ PROJECT_NAME: "lvi_sam"
 lvi_sam:
 
   # Topics
+  # pointCloudTopic: "/points"                # Point cloud data - lidar x-axis paralellel with the camera optical z-axis for now
   pointCloudTopic: "/points_out"                # Point cloud data - lidar x-axis paralellel with the camera optical z-axis for now
   # imuTopic: "/os_cloud_node/imu"              # IMU data (Ouster IMU, 6-axis)
   imuTopic: "/imu/data"                         # IMU data (9-axis IMU)
@@ -36,6 +37,15 @@ lvi_sam:
   extrinsicRPY: [1.0, 0.0, 0.0,
                 0.0, -1.0, 0.0,
                 0.0,  0.0, -1.0]
+
+  # # Extrinsics (lidar -> IMU) - not sure if this should be actually IMU -> Lidar. Symmetric for now
+  # extrinsicTrans: [0.000, 0.000, -0.280]
+  # extrinsicRot: [  0.7071068, -0.7071068, -0.0000000,
+  #                 -0.7071068, -0.7071068, -0.0000000,
+  #                 -0.0000000,  0.0000000, -1.0000000 ]
+  # extrinsicRPY: [  0.7071068, -0.7071068, -0.0000000,
+  #                 -0.7071068, -0.7071068, -0.0000000,
+  #                 -0.0000000,  0.0000000, -1.0000000 ]
 
   # LOAM feature threshold
   edgeThreshold: 1.0

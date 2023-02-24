@@ -4,7 +4,7 @@
     <!-- Lidar odometry param -->
     <rosparam file="$(find lvi_sam)/config/custom/params_lidar_ctu.yaml" command="load" />
     <!-- VINS config -->
-    <param name="vins_config_file" type="string" value="$(find lvi_sam)/config/custom/params_camera_ctu.yaml" />
+    <param name="vins_config_file" type="string" value="$(find lvi_sam)/config/custom/params_camera_t265.yaml" />
 
     <!-- Lidar odometry -->
     <node pkg="$(arg project)"      type="$(arg project)_imuPreintegration"   name="$(arg project)_imuPreintegration"    output="screen"     respawn="true"/>
